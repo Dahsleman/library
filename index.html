@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <div class="title-item" id="title-item">Virtual Library</div>
+            <button class="title-item" type="button" id="btn" onclick="openForm()">Add a book</button>
+        </div>
+        <div class="form-container" id="form-container">
+            <div class="form-item" id="form-title">
+                <div>Title</div>
+                <div>Author</div>
+                <div>Pages</div>
+                <div>Read</div>
+                <div>Edit</div>
+                <div>Delete</div>
+            </div>
+            <div class="form-item" id="form-item">
+                <div>Book Title</div>
+                <div>Author</div>
+                <div>Pages</div>
+                <div>Read</div>
+                <div id="edit">
+                    <span class="material-icons md-24 hover">edit</span>
+                </div>
+                <div id="delete">
+                    <span class="material-icons md-24 hover">delete</span>
+                </div>
+            </div>
+            <div class="form-item">
+                <div>Bible</div>
+                <div>GOD</div>
+                <div>1200</div>
+                <div id="0">Not Read</div>
+                <div id="edit-0">
+                    <span class="material-icons md-24 hover" onclick="editBible()">edit</span>
+                </div>
+                <div></div>
+            </div>
+
+        </div>
+        
+        <form action="submit" class="myForm" id="myForm" style="display:none;">
+            <div class="myForm-item" id="myForm-title">
+                Adding/Editing a book
+            </div>
+            <div class="myForm-item">
+                <input type="text" id="title" name="title" placeholder="Title" required>
+            </div>
+            <div class="myForm-item">
+                <input type="text" id="author" name="author" placeholder="Author" required>
+            </div>
+            <div class="myForm-item">
+                <input type="text" id="pages" name="pages" placeholder="Pages" required>
+            </div>
+            <div class="myForm-item">
+                <div class="myForm-item-radio-container">
+                    <div class="myForm-item-radio">
+                        Read Book?
+                    </div>
+                    <div class="myForm-item-radio">
+                        <input type="radio" id="yes" name="yes" value="yes" style="height:15px; width:25px;">Yes
+                        <input type="radio" id="no" name="no" value="no" style="height:15px; width:25px" checked>No
+                    </div>
+                </div>
+                
+            </div>
+            <div class="myForm-item" id="myForm-btn">
+                <button type="submit"  style="height:30px; width:80px;"> Submit </button>
+                <button type="button"  style="height:30px; width:80px; margin-left:10px; cursor: pointer;" onclick="returnForm()"> Return </button>
+            </div>      
+        </form>
+
+    </div>
+    
+</body>
+<script src="script.js">
+  
+</script>
+</html>
