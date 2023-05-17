@@ -26,16 +26,17 @@ function displayBooksintoHtml() {
     const book = myLibrary[i];
     const div = document.createElement("div");
     div.classList.add("form-item");
-
     div.setAttribute('id', `form-item-${index}`);
-    div.innerHTML = "<div>" + book.title + "</div><div>" + book.author + "</div><div>" + book.pages + `</div><div id=${index}>` + book.read + "</div>";
+    div.innerHTML = "<div class='form-item2'>" + book.title + "</div><div class='form-item2'>" + book.author + "</div><div class='form-item2'>" + book.pages + `</div><div class='form-item2' id=${index}>` + book.read + "</div>";
     
     const editClone = edit.cloneNode(true);
+    editClone.classList.add("form-item2");
     editClone.setAttribute('id', `edit-${index}`);
     editClone.addEventListener("click", editRead);
     div.appendChild(editClone);
     
     const delClone = del.cloneNode(true);
+    delClone.classList.add("form-item2");
     delClone.setAttribute('id', `del-${index}`);
     delClone.addEventListener("click", delChild);
     div.appendChild(delClone);

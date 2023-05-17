@@ -87,7 +87,17 @@
     padding-bottom: 10px;
 
     display:flex;
-    gap:10px;
+    gap:5px;
+    justify-content: center;
+}
+
+.form-item2 {
+    /* background-color: lightgrey;
+    border: 1px solid black; */
+    flex: 1 1 0;
+    max-width: 165px;
+    min-width: 50px;
+    word-wrap: break-word;
 }
 
 #form-title {
@@ -95,7 +105,6 @@
     font-weight: bold;
     color:white;
     font-size: 25px;
-    padding-bottom: 10px;
 }
 
 #form-item {
